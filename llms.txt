@@ -1,0 +1,8 @@
+# Chain Times
+
+> Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades.
+
+## Key pages
+- [Homepage](https://web3newsnetwork.github.io/): latest reporting and analysis.
+- [About](https://web3newsnetwork.github.io/about/): editorial scope, independence, sourcing and corrections.
+- [Archive](https://web3newsnetwork.github.io/archive/): everything published.
