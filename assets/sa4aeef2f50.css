@@ -230,8 +230,9 @@ main h1, main h2, main h3{overflow-wrap:anywhere; max-width:100%}
   main h1{font-size:clamp(1.9rem, 8vw, 2.7rem) !important; line-height:1.08 !important; word-break:break-word}
 
   body[data-page="home"] main h1{font-size:clamp(1.05rem, 4.6vw, 1.35rem) !important; line-height:1.25 !important}
-  main h2{font-size:clamp(1.5rem, 6.5vw, 2rem) !important; line-height:1.12 !important}
-  main h3{font-size:clamp(1.25rem, 5.5vw, 1.6rem) !important}
+
+  body:not([data-page="home"]):not([data-page="archive"]):not([data-page="topic"]) main h2{font-size:clamp(1.5rem, 6.5vw, 2rem) !important; line-height:1.12 !important}
+  body:not([data-page="home"]):not([data-page="archive"]):not([data-page="topic"]) main h3{font-size:clamp(1.25rem, 5.5vw, 1.6rem) !important}
   header a{overflow-wrap:anywhere}
   .s63a7d57{font-size:1.02rem !important; line-height:1.7 !important}
   .s63a7d57 img{max-height:none !important}
