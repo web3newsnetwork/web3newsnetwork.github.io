@@ -220,7 +220,8 @@ html, body{max-width:100%; overflow-x:hidden}
 main img, main svg, main video, main iframe, main table{max-width:100% !important}
 
 main > :not(.sef19a22):not(:has(.sef19a22)){padding-inline:clamp(1rem, 4vw, 2.4rem); box-sizing:border-box}
-header > :not(.sef19a22):not(:has(.sef19a22)), footer > :not(.sef19a22):not(:has(.sef19a22)){padding-inline:clamp(1rem, 4vw, 2.4rem); box-sizing:border-box}
+
+body > header > :not(.sef19a22):not(:has(.sef19a22)), body > footer > :not(.sef19a22):not(:has(.sef19a22)){padding-inline:clamp(1rem, 4vw, 2.4rem); box-sizing:border-box}
 main h1, main h2, main h3{overflow-wrap:anywhere; max-width:100%}
 
 .s63a7d57 a, footer a{background-image:none !important}
