@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polygon Bridge transfer pending after source confirmation</title>
+<meta name="description" content="A confirmed source transaction means the first chain accepted it, but the bridge may still need to process the transfer before funds appear on the other chain.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why a Polygon Bridge transfer can pause after confirmation">
+<meta property="og:description" content="A confirmed source transaction means the first chain accepted it, but the bridge may still need to process the transfer before funds appear on the other chain.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/why-a-polygon-bridge-transfer-can-pause-after-confirmation-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why a Polygon Bridge transfer can pause after confirmation"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why a Polygon Bridge transfer can pause after confirmation">
+<meta name="twitter:description" content="A confirmed source transaction means the first chain accepted it, but the bridge may still need to process the transfer before funds appear on the other chain.">
+<meta property="article:published_time" content="2026-10-04T09:48:23+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/#article",
+      "headline": "Why a Polygon Bridge transfer can pause after confirmation",
+      "isAccessibleForFree": true,
+      "description": "A confirmed source transaction means the first chain accepted it, but the bridge may still need to process the transfer before funds appear on the other chain.",
+      "datePublished": "2026-10-04T09:48:23+00:00",
+      "dateModified": "2026-10-04T09:48:23+00:00",
+      "url": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 522,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-a-polygon-bridge-transfer-can-pause-after-confirmation-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-a-polygon-bridge-transfer-can-pause-after-confirmation-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-a-polygon-bridge-transfer-can-pause-after-confirmation-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why a Polygon Bridge transfer can pause after confirmation",
+          "item": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/#webpage",
+      "url": "https://web3newsnetwork.github.io/why-a-polygon-bridge-transfer-can-pause-after-confirmation/",
+      "name": "Polygon Bridge transfer pending after source confirmation",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Why a Polygon Bridge transfer can pause after confirmation</h1>
+<p class="s9a5d2e1">A confirmed source transaction means the first chain accepted it, but the bridge may still need to process the transfer before funds appear on the other chain.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-04T09:48:23+00:00">Oct 4, 2026</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/why-a-polygon-bridge-transfer-can-pause-after-confirmation.jpg" alt="Why a Polygon Bridge transfer can pause after confirmation" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A confirmed source transaction means the first chain recorded your transfer, but it does not prove the funds have reached the destination. The bridge still has to detect and process that record, and some withdrawals also need a separate claim. That gap can look like a stalled transfer even when the first step succeeded.</p>
+
+<p>A transaction hash is the reference for checking a transaction on its source chain. Polygon’s support guidance says to check the source transaction and the bridge’s status when a transfer is pending. For a fuller account of the stages, see this <a href="https://wild-sulfur-d44.notion.site/Polygon-Bridge-Transfer-Tracking-Explained-3ed180e5a33680719965cfd533d7cd03" rel="noopener">guide to tracking Polygon Bridge transfers</a>. A successful source receipt is useful evidence, but the destination transaction is a separate event.</p>
+
+<h2>What does source confirmation mean?</h2>
+<p>It means the source network included the transaction in a block and marked it successful. It does not mean the destination network has completed its part. A bridge has to observe the source event, verify it under its rules, then arrange the corresponding action on the other chain.</p>
+
+<p>Think of it as two entries in separate ledgers. The source entry can be complete while the destination entry is still pending. The token may be locked or burned on the source, depending on the direction and bridge design, before a matching asset is released or created on the destination.</p>
+
+<h2>Why can the transfer pause between chains?</h2>
+<p>The bridge may be waiting for more source-chain confirmations, processing a batch of transfers, or catching up after network congestion. Each chain has its own block production and settlement process. A displayed “confirmed” label may describe only the source transaction, while a later status describes the bridge or destination step.</p>
+
+<p>Direction matters too. A transfer from Ethereum to Polygon PoS does not follow precisely the same path as a withdrawal back to Ethereum. Some Polygon PoS withdrawals require the user to claim funds on Ethereum after the bridge has prepared the withdrawal. That final claim is a new transaction and needs Ethereum gas. Do not assume that every route requires a claim; check the transfer page for the specific transaction.</p>
+
+<h2>What should you check while it is pending?</h2>
+<p>Start with the transaction hash on the source chain’s block explorer. Confirm that the status is successful, and check the destination address and token. Then open the bridge’s transaction history and compare its status with the source record. Polygon Portal says its history covers Native and Socket bridge transactions; if a transfer is missing there, the page notes it may be a temporary app issue.</p>
+
+<ul>
+<li>If the source transaction failed, the bridge cannot complete that transfer.</li>
+<li>If it succeeded, keep the hash and check whether the bridge shows another step.</li>
+<li>If the page asks for a claim, verify the destination network and fee before signing.</li>
+</ul>
+
+<p>Do not submit the same transfer again just because the interface has not updated. First establish whether the original transaction succeeded and whether a destination transaction exists. If the bridge status remains unclear, use the support route linked from the official portal and provide the source hash. A confirmed source transaction is a useful checkpoint, not proof that the journey is finished.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/check-bnb-token-liquidity-before-you-trade/">Check BNB Token Liquidity Before You Trade</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/how-much-liquidity-should-a-new-token-pool-start-with/">How Much Liquidity Should a New Token Pool Start With?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/sec-proposes-new-custody-path-for-crypto-advisers-and-funds/">SEC proposes new custody path for crypto advisers and funds</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/moving-liquidity-when-a-pool-changes-chains/">Moving Liquidity When a Pool Changes Chains</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li>      </ul>
+    </nav>
+    <p class="s837b768">An independent outlet. Nothing here is financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
