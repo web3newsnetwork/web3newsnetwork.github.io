@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://web3newsnetwork.github.io/</loc><lastmod>2026-10-07T22:41:23+00:00</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://web3newsnetwork.github.io/</loc><lastmod>2026-10-09T01:35:17+00:00</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://web3newsnetwork.github.io/esma-sets-three-month-wind-down-for-non-mica-stablecoins/</loc><lastmod>2026-10-09T01:35:17+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://web3newsnetwork.github.io/fincen-withdraws-crypto-wallet-and-mixer-proposals/</loc><lastmod>2026-10-07T22:41:23+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://web3newsnetwork.github.io/syncswap-should-you-swap-tokens-or-add-liquidity/</loc><lastmod>2026-10-07T09:19:41+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://web3newsnetwork.github.io/payward-singapore-gulf-bank-add-24-7-crypto-settlement/</loc><lastmod>2026-10-07T00:13:11+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -27,10 +28,10 @@
 <url><loc>https://web3newsnetwork.github.io/sec-proposes-crypto-custody-rules-for-advisers-and-funds/</loc><lastmod>2026-10-02T20:49:51+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://web3newsnetwork.github.io/how-a-treasury-can-move-funds-with-manta-bridge/</loc><lastmod>2026-10-02T15:13:37+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://web3newsnetwork.github.io/csd-br-starts-mirroring-fund-shares-on-xrp-ledger/</loc><lastmod>2026-10-01T17:10:24+00:00</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://web3newsnetwork.github.io/archive/</loc><lastmod>2026-10-07T22:41:23+00:00</lastmod><priority>0.3</priority></url>
+<url><loc>https://web3newsnetwork.github.io/archive/</loc><lastmod>2026-10-09T01:35:17+00:00</lastmod><priority>0.3</priority></url>
 <url><loc>https://web3newsnetwork.github.io/about/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
 <url><loc>https://web3newsnetwork.github.io/privacy/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
 <url><loc>https://web3newsnetwork.github.io/editorial-standards/</loc><lastmod>2026-10-01</lastmod><priority>0.3</priority></url>
-<url><loc>https://web3newsnetwork.github.io/page/2/</loc><lastmod>2026-10-07T22:41:23+00:00</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
-<url><loc>https://web3newsnetwork.github.io/page/3/</loc><lastmod>2026-10-07T22:41:23+00:00</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
+<url><loc>https://web3newsnetwork.github.io/page/2/</loc><lastmod>2026-10-09T01:35:17+00:00</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
+<url><loc>https://web3newsnetwork.github.io/page/3/</loc><lastmod>2026-10-09T01:35:17+00:00</lastmod><changefreq>weekly</changefreq><priority>0.2</priority></url>
 </urlset>
