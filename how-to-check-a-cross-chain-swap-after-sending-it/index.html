@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a cross-chain swap after sending | Chain Times</title>
+<meta name="description" content="After sending a cross-chain swap, check the source transaction, follow its status, then confirm the outgoing transfer and token on the destination chain.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to check a cross-chain swap after sending it">
+<meta property="og:description" content="After sending a cross-chain swap, check the source transaction, follow its status, then confirm the outgoing transfer and token on the destination chain.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/how-to-check-a-cross-chain-swap-after-sending-it-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to check a cross-chain swap after sending it"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to check a cross-chain swap after sending it">
+<meta name="twitter:description" content="After sending a cross-chain swap, check the source transaction, follow its status, then confirm the outgoing transfer and token on the destination chain.">
+<meta property="article:published_time" content="2026-10-15T20:14:10+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/#article",
+      "headline": "How to check a cross-chain swap after sending it",
+      "isAccessibleForFree": true,
+      "description": "After sending a cross-chain swap, check the source transaction, follow its status, then confirm the outgoing transfer and token on the destination chain.",
+      "datePublished": "2026-10-15T20:14:10+00:00",
+      "dateModified": "2026-10-15T20:14:10+00:00",
+      "url": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 502,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-check-a-cross-chain-swap-after-sending-it-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-check-a-cross-chain-swap-after-sending-it-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-check-a-cross-chain-swap-after-sending-it-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to check a cross-chain swap after sending it",
+          "item": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/#webpage",
+      "url": "https://web3newsnetwork.github.io/how-to-check-a-cross-chain-swap-after-sending-it/",
+      "name": "Check a cross-chain swap after sending | Chain Times",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">How to check a cross-chain swap after sending it</h1>
+<p class="s9a5d2e1">After sending a cross-chain swap, check the source transaction, follow its status, then confirm the outgoing transfer and token on the destination chain.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-15T20:14:10+00:00">Oct 15, 2026 · 20:14 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/how-to-check-a-cross-chain-swap-after-sending-it.jpg" alt="How to check a cross-chain swap after sending it" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>To check a cross-chain swap after sending it, follow the deposit on the source chain and then verify the outgoing transfer on the destination chain. A swap can involve more than one transaction, so a confirmed deposit does not by itself prove the funds arrived. Start with the transaction hash in the swap app or wallet and open it in an explorer for the chain you sent from.</p>
+
+<h2>What should I check first?</h2>
+<p>Check that the source transaction is confirmed and that its destination address matches the address shown by the swap app. A transaction hash is the unique ID for that transaction; a block explorer shows its status, sender, recipient and included block. Ethereum.org describes these as standard explorer details. If the transaction is pending, the swap may not have reached the service or network that handles the next step. If it failed, check the wallet or app for the reason before trying again.</p>
+
+<p>Once the deposit is confirmed, the swap still needs to be processed and sent on the other chain. The stages and wait time vary by service and network conditions. For more on how congestion can affect timing, see <a href="https://mariahxutx087800.blogozz.com/42105667/thor-swap-timing-when-one-chain-is-congested" rel="noopener">thor swap</a>. The THORChain documentation, for example, describes delayed outbound transfers as a separate stage to track.</p>
+
+<h2>How do I confirm the swap reached the other chain?</h2>
+<p>Look for an outbound transaction ID in the swap app’s status page or tracker. Open that ID in an explorer for the destination chain. Check that the recipient is your wallet address, the token is the one you expected, and the transaction status shows success. A successful source deposit and a successful destination transfer are separate checks.</p>
+
+<p>Compare the amount received with the quote shown before you sent the swap. The final amount can differ because of the quoted rate, fees or a change in the rate while the swap was processed. The explorer shows what reached your address; the swap app can help explain how that amount was calculated.</p>
+
+<h2>What should I do if the swap is still waiting?</h2>
+<p>Use the source and destination transaction IDs to work out which stage is waiting. If the source transaction is confirmed but there is no outbound ID yet, check the swap app’s tracker for an update. If an outbound ID exists, the destination explorer can show whether that transaction is pending, failed or confirmed. A slow or congested network can hold up one stage while the other has already finished.</p>
+
+<ul>
+<li>Save the swap’s reference number and both transaction IDs.</li>
+<li>Check each ID on the explorer for its own chain.</li>
+<li>Confirm the destination address and token before treating the swap as complete.</li>
+<li>If the app reports a failure or the tracker stops updating, contact that service’s support with the reference number.</li>
+</ul>
+
+<p>Use only the swap app and public explorers to check progress. No support agent needs your wallet recovery phrase or private key. The practical test is simple: confirm the deposit, then confirm the outbound transaction and the asset in your destination wallet.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/how-to-compare-bridge-swap-quotes-before-you-send/">How to Compare Bridge Swap Quotes Before You Send</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/how-to-swap-into-a-protocols-minimum-deposit-token/">How to Swap Into a Protocol’s Minimum Deposit Token</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/ripple-brings-privy-wallets-to-xrp-ledger-as-ai-use-grows/">Ripple brings Privy wallets to XRP Ledger as AI use grows</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/how-to-move-treasury-crypto-with-super-bridge/">How to Move Treasury Crypto With Super Bridge</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
