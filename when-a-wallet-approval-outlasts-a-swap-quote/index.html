@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallet Approval vs. Swap Quote: What Happens Next</title>
+<meta name="description" content="A wallet approval gives a contract permission to use tokens; it does not reserve a swap price, so a quote can change or expire before execution on chain.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="When a Wallet Approval Outlasts a Swap Quote">
+<meta property="og:description" content="A wallet approval gives a contract permission to use tokens; it does not reserve a swap price, so a quote can change or expire before execution on chain.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/when-a-wallet-approval-outlasts-a-swap-quote-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="When a Wallet Approval Outlasts a Swap Quote"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When a Wallet Approval Outlasts a Swap Quote">
+<meta name="twitter:description" content="A wallet approval gives a contract permission to use tokens; it does not reserve a swap price, so a quote can change or expire before execution on chain.">
+<meta property="article:published_time" content="2026-10-16T17:49:45+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/#article",
+      "headline": "When a Wallet Approval Outlasts a Swap Quote",
+      "isAccessibleForFree": true,
+      "description": "A wallet approval gives a contract permission to use tokens; it does not reserve a swap price, so a quote can change or expire before execution on chain.",
+      "datePublished": "2026-10-16T17:49:45+00:00",
+      "dateModified": "2026-10-16T17:49:45+00:00",
+      "url": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 495,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/when-a-wallet-approval-outlasts-a-swap-quote-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/when-a-wallet-approval-outlasts-a-swap-quote-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/when-a-wallet-approval-outlasts-a-swap-quote-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "When a Wallet Approval Outlasts a Swap Quote",
+          "item": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/#webpage",
+      "url": "https://web3newsnetwork.github.io/when-a-wallet-approval-outlasts-a-swap-quote/",
+      "name": "Wallet Approval vs. Swap Quote: What Happens Next",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">When a Wallet Approval Outlasts a Swap Quote</h1>
+<p class="s9a5d2e1">A wallet approval gives a contract permission to use tokens; it does not reserve a swap price, so a quote can change or expire before execution on chain.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-16T17:49:45+00:00">Oct 16, 2026 · 17:49 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/when-a-wallet-approval-outlasts-a-swap-quote.jpg" alt="When a Wallet Approval Outlasts a Swap Quote" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A wallet approval can remain valid after a swap quote goes stale because the approval and the swap do different jobs. The approval lets a contract use a set amount of a token; the quote estimates what a later swap may return. Approving does not lock in that price.</p>
+
+<p>That gap matters when a swap needs a separate approval transaction first. Uniswap Support describes this sequence in its help guide: approve the token, then confirm the swap. For a cross-chain route, the approval is usually part of the source-chain steps, while the route may include more than one operation. See <a href="https://heidibjil375101.blogmazing.com/42139480/how-to-use-quickswap-for-a-cross-chain-crypto-swap" rel="noopener">how a quickswap cross-chain swap works</a> for those steps. The key point is the same: a quickswap quote is not itself permission to move tokens.</p>
+
+<h2>What does a wallet approval let a contract do?</h2>
+
+<p>An approval lets a named contract spend up to an allowed amount of a token from your wallet. On ERC-20 tokens, this permission is commonly called an allowance. It is recorded by the token contract, so it can outlast the browser tab, quote, or app session that prompted it.</p>
+
+<p>The approved amount may match the swap amount, or it may be larger. If the allowance remains, the contract can still use it for a later transaction within that limit. The quote does not set or cancel the allowance. Its lifetime and conditions depend on the token or approval method; a signed permission may also have its own expiry.</p>
+
+<h2>What happens if the quote changes before the swap?</h2>
+
+<p>The swap transaction uses its own conditions, such as a minimum amount to receive and sometimes a deadline. These details protect the trade from executing too far from the quoted terms. Uniswap Support explains that a swap can fail if its output falls beyond the chosen slippage limit or its deadline passes.</p>
+
+<p>If the market moves but the transaction still meets those conditions, it may execute for less than the quote showed, within the allowed limit. If the conditions are no longer met, the swap fails. The approval remains in place because it was a separate transaction. A failed swap may still cost a network fee, depending on the chain and transaction outcome.</p>
+
+<h2>What should you check before signing again?</h2>
+
+<p>After an approval confirms, get a fresh quote before submitting the swap. Check these details in the wallet or swap screen:</p>
+
+<ul>
+  <li>The token and amount being spent.</li>
+  <li>The contract receiving permission and the allowance amount.</li>
+  <li>The estimated output and minimum output.</li>
+  <li>The network and any deadline shown for the swap.</li>
+</ul>
+
+<p>If the old quote expired, do not assume the earlier swap is still waiting to complete. Review the fresh terms and submit a new swap if they suit you. Where the wallet or token tools allow it, you can also reduce or revoke an allowance you no longer need. For most readers, a limited approval is easier to reason about than an open-ended one, though it can mean approving again for a later trade.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/what-to-do-when-a-bridge-route-changes/">What to do when a bridge route changes</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/network-school-takes-farcaster-adds-rules-for-posting/">Network School takes Farcaster, adds rules for posting</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/get-the-right-token-to-repay-crypto-debt/">Get the Right Token to Repay Crypto Debt</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/bridge-collateral-to-mantle-before-minting-a-stablecoin/">Bridge collateral to Mantle before minting a stablecoin</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
