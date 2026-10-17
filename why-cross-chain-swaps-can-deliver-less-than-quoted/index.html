@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross-Chain Swap Slippage: Why the Amount Changes</title>
+<meta name="description" content="Cross-chain swap slippage is the gap between a quoted amount and what arrives; route steps, pool liquidity and timing explain why the final amount can change.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why cross-chain swaps can deliver less than quoted">
+<meta property="og:description" content="Cross-chain swap slippage is the gap between a quoted amount and what arrives; route steps, pool liquidity and timing explain why the final amount can change.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/why-cross-chain-swaps-can-deliver-less-than-quoted-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why cross-chain swaps can deliver less than quoted"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why cross-chain swaps can deliver less than quoted">
+<meta name="twitter:description" content="Cross-chain swap slippage is the gap between a quoted amount and what arrives; route steps, pool liquidity and timing explain why the final amount can change.">
+<meta property="article:published_time" content="2026-10-17T07:17:07+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/#article",
+      "headline": "Why cross-chain swaps can deliver less than quoted",
+      "isAccessibleForFree": true,
+      "description": "Cross-chain swap slippage is the gap between a quoted amount and what arrives; route steps, pool liquidity and timing explain why the final amount can change.",
+      "datePublished": "2026-10-17T07:17:07+00:00",
+      "dateModified": "2026-10-17T07:17:07+00:00",
+      "url": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 546,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-cross-chain-swaps-can-deliver-less-than-quoted-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-cross-chain-swaps-can-deliver-less-than-quoted-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-cross-chain-swaps-can-deliver-less-than-quoted-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why cross-chain swaps can deliver less than quoted",
+          "item": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/#webpage",
+      "url": "https://web3newsnetwork.github.io/why-cross-chain-swaps-can-deliver-less-than-quoted/",
+      "name": "Cross-Chain Swap Slippage: Why the Amount Changes",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Why cross-chain swaps can deliver less than quoted</h1>
+<p class="s9a5d2e1">Cross-chain swap slippage is the gap between a quoted amount and what arrives; route steps, pool liquidity and timing explain why the final amount can change.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-17T07:17:07+00:00">Oct 17, 2026 · 07:17 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/why-cross-chain-swaps-can-deliver-less-than-quoted.jpg" alt="Why cross-chain swaps can deliver less than quoted" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Cross-chain swap slippage is the difference between the amount a route quotes and the amount you receive when it completes. It matters because a swap across two networks can involve several steps, and the prices or available liquidity can change before each one runs.</p>
+
+<p>A route may swap your asset on the source network, move value across a bridge, then swap again on the destination network. The exact steps depend on the route shown by the swap interface. Each trade can use a different pool, where traders swap tokens, and a thin pool may give you a worse rate for a larger trade. A bridge moves assets or messages between networks; it does not guarantee that the same token or trading conditions exist at the destination. For the separate question of which destination tokens support WBTC, see <a href="https://chainbrief.pages.dev/acrossbridge-wbtc-destination-support-depends-on-the-token/" rel="noopener">Acrossbridge WBTC destination support</a>. That token support question is distinct from the route’s slippage estimate.</p>
+
+<h2>What makes slippage change on a cross-chain swap?</h2>
+
+<p>Slippage can change when the trade moves the pool price, when other trades happen first, or when the route takes longer to complete. The swap screen’s quote is an estimate based on the route and market conditions at that moment. A later transaction may execute at a different rate, especially if the route waits for activity on more than one network.</p>
+
+<p>Fees also affect how much arrives, but they are not the same as slippage. The route preview may list network fees, bridge fees, or a swap fee separately. Compare the quoted output and the fees as separate parts of the cost; a lower slippage setting does not remove fees.</p>
+
+<h2>How should I read the quoted amount and minimum?</h2>
+
+<p>The quote shows an expected amount. The minimum received is the lowest amount the transaction is set to accept under its slippage limit. If the final output falls below that minimum, the swap may fail instead of completing at a worse rate. Check the interface’s route details, since it may show several steps and separate amounts.</p>
+
+<ul>
+<li>Compare the expected output with the amount you send, not just the headline exchange rate.</li>
+<li>Check the minimum received and the slippage setting before confirming.</li>
+<li>Look for fees and the destination token in the route details.</li>
+<li>If the quote changes while you review it, refresh it and read the updated minimum.</li>
+</ul>
+
+<p>Raising the slippage limit can let a transaction complete after a larger price move, but it also lets you receive less than the original quote. It does not improve the price or make the route faster. Use the limit shown by the interface as a boundary you understand, rather than increasing it just to make a failed swap go through.</p>
+
+<h2>What is the practical way to reduce slippage?</h2>
+
+<p>For most readers, the better choice is to compare the route’s expected output, minimum and fees, then use a route with enough liquidity for the trade. A smaller trade can have less price impact in a shallow pool, though the displayed quote and fees still matter. If the minimum looks too low or the token does not match what you intend to receive, pause and review the route before confirming. Slippage is a property of the route and its conditions, not a fixed charge you can predict from the network alone.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/coinbase-to-power-stablecoin-cards-for-marqeta-customers/">Coinbase to power stablecoin cards for Marqeta customers</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/what-to-do-when-a-crypto-bridge-transfer-times-out/">What to do when a crypto bridge transfer times out</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/">How to Estimate a Minimum Swap Size for Each Asset Pair</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/mantle-bridge-or-swap-which-route-fits-the-transfer/">Mantle Bridge or Swap: Which Route Fits the Transfer?</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
