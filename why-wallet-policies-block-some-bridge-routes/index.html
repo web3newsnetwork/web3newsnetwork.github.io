@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wallet policy blocks on bridge routes, explained</title>
+<meta name="description" content="A bridge route can fail before funds move when its wallet call breaks a rule on networks, contracts, approvals or limits; learn what to check next.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Why wallet policies block some bridge routes">
+<meta property="og:description" content="A bridge route can fail before funds move when its wallet call breaks a rule on networks, contracts, approvals or limits; learn what to check next.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/why-wallet-policies-block-some-bridge-routes-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Why wallet policies block some bridge routes"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why wallet policies block some bridge routes">
+<meta name="twitter:description" content="A bridge route can fail before funds move when its wallet call breaks a rule on networks, contracts, approvals or limits; learn what to check next.">
+<meta property="article:published_time" content="2026-10-17T09:03:01+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/#article",
+      "headline": "Why wallet policies block some bridge routes",
+      "isAccessibleForFree": true,
+      "description": "A bridge route can fail before funds move when its wallet call breaks a rule on networks, contracts, approvals or limits; learn what to check next.",
+      "datePublished": "2026-10-17T09:03:01+00:00",
+      "dateModified": "2026-10-17T09:03:01+00:00",
+      "url": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 448,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-wallet-policies-block-some-bridge-routes-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-wallet-policies-block-some-bridge-routes-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/why-wallet-policies-block-some-bridge-routes-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why wallet policies block some bridge routes",
+          "item": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/#webpage",
+      "url": "https://web3newsnetwork.github.io/why-wallet-policies-block-some-bridge-routes/",
+      "name": "Wallet policy blocks on bridge routes, explained",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Why wallet policies block some bridge routes</h1>
+<p class="s9a5d2e1">A bridge route can fail before funds move when its wallet call breaks a rule on networks, contracts, approvals or limits; learn what to check next.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-17T09:03:01+00:00">Oct 17, 2026 · 09:03 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/why-wallet-policies-block-some-bridge-routes.jpg" alt="Why wallet policies block some bridge routes" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A wallet policy blocks a bridge route when a transaction the route needs breaks a rule set on the wallet. That can stop a transfer before the wallet signs it, even if the bridge itself is working. A route is the series of steps used to move an asset between networks.</p>
+
+<h2>What does a bridge route ask the wallet to do?</h2>
+<p>A route may ask the wallet to approve a token, then send a transaction to a bridge contract or another service that handles the transfer. The destination network may also need to be allowed by the wallet. Each step can be checked separately, so a route can pass one check and fail at the next.</p>
+<p>For example, a treasury wallet might allow transfers on two networks but only to approved contract addresses. If the route calls an unlisted contract, the wallet can reject it before the transaction reaches the network. Safe’s documentation explains that a transaction guard can check transaction details before execution. A fuller guide to <a href="https://tokentrail.pages.dev/how-to-move-treasury-funds-across-chains-with-biswap/" rel="noopener">moving treasury funds across chains with Biswap</a> covers the transfer process in more detail. The wallet’s own rules still determine whether its signers can approve each call.</p>
+
+<h2>Which wallet rules can block a route?</h2>
+<p>Rules vary by wallet, but they often check the network, destination address, token recipient or amount. MetaMask’s Agent Wallet documentation, for example, describes network and address allowlists, recipient allowlists and outflow limits. A route can fail if any required transaction falls outside the rules. A limit may also block a transfer even when the network and contract are approved.</p>
+<ul>
+<li><strong>Network:</strong> Is the source chain allowed, and is the destination chain supported by the wallet’s rules?</li>
+<li><strong>Contract:</strong> Does the transaction call an approved bridge or router address?</li>
+<li><strong>Approval:</strong> Does the token approval name an allowed spender, and is its amount within policy?</li>
+<li><strong>Transfer limit:</strong> Does the amount fit the per-transaction or rolling outflow cap?</li>
+</ul>
+
+<h2>What should you check when a route is blocked?</h2>
+<p>Read the wallet’s rejection details and identify which transaction failed. Check the chain, contract address, approval spender and amount against the policy. A route preview may show one call, while the wallet prompt exposes the contract and token approval it will actually request. Compare those details with the route information from the bridge interface you used.</p>
+<p>If the route needs a contract or chain the wallet does not allow, an authorized policy administrator may need to review the rule. Do not widen an allowlist or raise a limit just to make a transfer go through; first confirm that the requested address and approval match the intended route. A wallet block is a policy decision, not proof that the bridge failed or that funds moved.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/why-cross-chain-swaps-can-deliver-less-than-quoted/">Why cross-chain swaps can deliver less than quoted</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/coinbase-to-power-stablecoin-cards-for-marqeta-customers/">Coinbase to power stablecoin cards for Marqeta customers</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/what-to-do-when-a-crypto-bridge-transfer-times-out/">What to do when a crypto bridge transfer times out</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/">How to Estimate a Minimum Swap Size for Each Asset Pair</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
