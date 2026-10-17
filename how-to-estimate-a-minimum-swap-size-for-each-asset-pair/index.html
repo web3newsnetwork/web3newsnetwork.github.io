@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minimum Swap Size by Asset Pair: How to Estimate It</title>
+<meta name="description" content="Estimate a route&#39;s minimum size by comparing chain fees with the input value, then check pool depth and a fresh quote for that asset pair before sending funds.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to Estimate a Minimum Swap Size for Each Asset Pair">
+<meta property="og:description" content="Estimate a route&#39;s minimum size by comparing chain fees with the input value, then check pool depth and a fresh quote for that asset pair before sending funds.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/how-to-estimate-a-minimum-swap-size-for-each-asset-pair-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to Estimate a Minimum Swap Size for Each Asset Pair"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Estimate a Minimum Swap Size for Each Asset Pair">
+<meta name="twitter:description" content="Estimate a route&#39;s minimum size by comparing chain fees with the input value, then check pool depth and a fresh quote for that asset pair before sending funds.">
+<meta property="article:published_time" content="2026-10-17T04:05:41+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/#article",
+      "headline": "How to Estimate a Minimum Swap Size for Each Asset Pair",
+      "isAccessibleForFree": true,
+      "description": "Estimate a route's minimum size by comparing chain fees with the input value, then check pool depth and a fresh quote for that asset pair before sending funds.",
+      "datePublished": "2026-10-17T04:05:41+00:00",
+      "dateModified": "2026-10-17T04:05:41+00:00",
+      "url": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 512,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-estimate-a-minimum-swap-size-for-each-asset-pair-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-estimate-a-minimum-swap-size-for-each-asset-pair-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-estimate-a-minimum-swap-size-for-each-asset-pair-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Estimate a Minimum Swap Size for Each Asset Pair",
+          "item": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/#webpage",
+      "url": "https://web3newsnetwork.github.io/how-to-estimate-a-minimum-swap-size-for-each-asset-pair/",
+      "name": "Minimum Swap Size by Asset Pair: How to Estimate It",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">How to Estimate a Minimum Swap Size for Each Asset Pair</h1>
+<p class="s9a5d2e1">Estimate a route&#39;s minimum size by comparing chain fees with the input value, then check pool depth and a fresh quote for that asset pair before sending funds.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-10-17T04:05:41+00:00">Oct 17, 2026 · 04:05 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/how-to-estimate-a-minimum-swap-size-for-each-asset-pair.jpg" alt="How to Estimate a Minimum Swap Size for Each Asset Pair" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Estimate a route’s minimum size by finding the amount at which its fees stop consuming too much of the input, then confirm it with a live quote. There is no single minimum that works for every asset pair. The source chain, destination chain, pool depth and current network fees all affect the result.</p>
+
+<p>THORChain’s developer docs describe separate costs for sending funds in, using pool liquidity and sending the output asset. A cross-chain swap may use two pools, so both the route and the destination matter. For a fuller account of wallet setup and the swap flow, see <a href="https://cryptoworldnews.github.io/how-to-use-thor-swap-from-your-own-wallet/" rel="noopener">thor swap</a>.</p>
+
+<h2>What costs set the minimum route size?</h2>
+
+<p>The minimum is the point where the expected output still makes sense after fees. Start with the source-chain fee, which your wallet charges to send the deposit. Then account for the pool’s liquidity fee, the destination-chain outbound fee and any optional interface fee. A failed swap can also cost money: THORChain’s docs say a refund may deduct an outbound fee on the source chain.</p>
+
+<p>Fixed fees matter more on a small trade. If a route costs the equivalent of $5 to send and deliver funds, that cost is 5% of a $100 input but 0.5% of a $1,000 input. The percentages are examples; actual fees change with the chains and network conditions.</p>
+
+<h2>How does the asset pair change the estimate?</h2>
+
+<p>Each pair has its own fee mix and liquidity, so estimate the route for the exact assets you plan to swap. A pair that ends on a chain with costly transactions can have a higher practical floor than one with cheaper delivery. Thin pools also make a given trade larger relative to available liquidity, which can increase price impact, the change in price caused by the trade.</p>
+
+<p>Use the same input asset and destination asset when comparing quotes. If the interface lets you choose a route or swap mode, compare the expected output and total fees, not just the headline rate. A slower, divided swap may reduce price impact, but it does not make fixed network costs disappear.</p>
+
+<h2>How can you check a sensible minimum?</h2>
+
+<p>Get a fresh quote for the pair and treat its suggested minimum as a starting point, not a promise that the trade is worthwhile. THORChain’s Swap Quote endpoint includes <strong>recommended_min_amount_in</strong>, an estimate of the input needed to cover minimum fees. The docs say it can change with network settings and conditions.</p>
+
+<p>Before sending, compare the quote at your intended size with the smallest quoted size that clears fees. Check these items:</p>
+
+<ul>
+<li>Input-chain fee shown by your wallet.</li>
+<li>Output-chain fee and any affiliate fee in the quote.</li>
+<li>Expected output after fees, compared with your own minimum acceptable amount.</li>
+<li>Price impact for the route at that size.</li>
+</ul>
+
+<p>Use a buffer if fees can rise before the transaction is processed, and refresh the quote before signing. The practical minimum for an asset pair is the smallest size that clears the fee floor and still meets your output target. If the quote cannot show that clearly, wait or choose a larger input.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/mantle-bridge-or-swap-which-route-fits-the-transfer/">Mantle Bridge or Swap: Which Route Fits the Transfer?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/how-much-native-gas-does-a-cross-chain-swap-need/">How Much Native Gas Does a Cross-Chain Swap Need?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/what-a-stale-swap-quote-means-and-how-to-refresh-it/">What a Stale Swap Quote Means and How to Refresh It</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/why-cross-chain-messages-can-take-time-to-settle/">Why cross-chain messages can take time to settle</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
