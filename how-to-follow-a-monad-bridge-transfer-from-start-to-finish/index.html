@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How does Monad bridge work? Lock, attest, mint | Chain Times</title>
+<meta name="description" content="How does Monad bridge work? A source contract locks or burns assets, a messaging layer attests to the transfer, and a destination contract releases or mints them.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How to follow a Monad bridge transfer from start to finish">
+<meta property="og:description" content="How does Monad bridge work? A source contract locks or burns assets, a messaging layer attests to the transfer, and a destination contract releases or mints them.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/how-to-follow-a-monad-bridge-transfer-from-start-to-finish-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How to follow a Monad bridge transfer from start to finish"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to follow a Monad bridge transfer from start to finish">
+<meta name="twitter:description" content="How does Monad bridge work? A source contract locks or burns assets, a messaging layer attests to the transfer, and a destination contract releases or mints them.">
+<meta property="article:published_time" content="2026-11-17T07:12:52+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/#article",
+      "headline": "How to follow a Monad bridge transfer from start to finish",
+      "isAccessibleForFree": true,
+      "description": "How does Monad bridge work? A source contract locks or burns assets, a messaging layer attests to the transfer, and a destination contract releases or mints them.",
+      "datePublished": "2026-11-17T07:12:52+00:00",
+      "dateModified": "2026-11-17T07:12:52+00:00",
+      "url": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 504,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-follow-a-monad-bridge-transfer-from-start-to-finish-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-follow-a-monad-bridge-transfer-from-start-to-finish-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-to-follow-a-monad-bridge-transfer-from-start-to-finish-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to follow a Monad bridge transfer from start to finish",
+          "item": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/#webpage",
+      "url": "https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/",
+      "name": "How does Monad bridge work? Lock, attest, mint | Chain Times",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">How to follow a Monad bridge transfer from start to finish</h1>
+<p class="s9a5d2e1">How does Monad bridge work? A source contract locks or burns assets, a messaging layer attests to the transfer, and a destination contract releases or mints them.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-17T07:12:52+00:00">Nov 17, 2026 · 07:12 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/how-to-follow-a-monad-bridge-transfer-from-start-to-finish.jpg" alt="How to follow a Monad bridge transfer from start to finish" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Monad bridge moves assets between Ethereum and Monad when a source-chain contract locks or burns tokens and the destination contract accepts a verified message. Read <a href="https://monad-bridge.org" rel="noopener">Monad bridge</a> for more on how the bridge to Monad moves assets from Ethereum. The message matters because Ethereum and Monad cannot read each other’s state directly; signed proof carries evidence of the source-chain transfer.</p>
+<h2>How does Monad bridge move tokens?</h2>
+<p>A bridge transfer passes through the source contract, a finality check, an attestation, a relayer, and the destination contract. Each stage leaves a different state behind.</p>
+<ol>
+<li>You start with tokens on Ethereum, such as ETH or a supported asset. Your wallet asks the source contract to transfer them.</li>
+<li>The source contract locks the tokens or burns them, then emits a message describing the transfer. The tokens are now locked or removed from that chain’s supply.</li>
+<li>The messaging layer waits for the source transaction to reach finality, then signs or validates its message. Wormhole produces a VAA, a signed attestation; Axelar validates a GMP call through its proof-of-stake validator set.</li>
+<li>A relayer submits that proof on Monad. The destination contract verifies it, then releases tokens held there or mints matching tokens. The assets are now available on Monad.</li>
+</ol>
+<p>Monad is EVM-compatible, and MON is its native gas token. The bridge message handles the cross-chain proof; it does not make the two chains share a single transaction state.</p>
+<h2>Who secures a bridge to Monad?</h2>
+<p>The attestation set secures the cross-chain claim that tokens were locked or burned. That is the key trust point: the bridged token relies on the group signing or validating the message, not on Ethereum’s or Monad’s consensus alone.</p>
+<p>For Wormhole, 19 Guardians form the attestation set, and 13 signatures are needed to create a VAA. Axelar GMP messages are validated by Axelar’s proof-of-stake validator set. These are different ways to attest to a source event; the route’s contracts and messaging design determine which trust assumptions apply.</p>
+<p>The token model also matters. Wormhole Native Token Transfers (NTT) supports burn-and-mint as well as hub-and-spoke locking. Burn-and-mint keeps one token supply across chains: tokens burned on the source chain are minted on the destination. Lock-and-mint leaves value in a source-chain vault while corresponding tokens are minted elsewhere. That vault becomes a place where value is concentrated, so its security matters too.</p>
+<h2>What can make a transfer wait?</h2>
+<p>A transfer can wait for source finality, the attestation, or a relayer to submit the proof. Those are separate stages, so a delay at one does not mean the same thing as a delay at another.</p>
+<p>In the Ethereum-to-Monad example, the source transaction may be complete while the attestation is still pending. After signatures or validation are ready, the transfer can still wait for relay and destination verification. Following those states helps locate the pause without treating “sent” as “received.”</p>
+<p>Fees depend on the chosen route and its transactions; this pipeline alone gives no fixed fee. The main security question is which attestation set and contracts authorize the destination release or mint.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/revoke-cash-browser-extension-simulation-before-signing/">Revoke.cash Browser Extension: Simulation Before Signing</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/us-wins-court-approval-over-1-2b-in-binance-theft-funds/">US wins court approval over $1.2B in Binance theft funds</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/us-gets-court-approval-over-1-2bn-in-binance-hack-funds/">US gets court approval over $1.2bn in Binance hack funds</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/us-wins-court-authority-over-1-2b-in-binance-theft/">US wins court authority over $1.2B in Binance theft</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
