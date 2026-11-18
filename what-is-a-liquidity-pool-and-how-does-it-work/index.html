@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Is a Liquidity Pool in DeFi? Simple Explanation</title>
+<meta name="description" content="A liquidity pool in DeFi is a smart contract holding tokens for swaps. Learn how its price formula works and what LP tokens represent.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="What Is a Liquidity Pool, and How Does It Work?">
+<meta property="og:description" content="A liquidity pool in DeFi is a smart contract holding tokens for swaps. Learn how its price formula works and what LP tokens represent.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/what-is-a-liquidity-pool-and-how-does-it-work-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What Is a Liquidity Pool, and How Does It Work?"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is a Liquidity Pool, and How Does It Work?">
+<meta name="twitter:description" content="A liquidity pool in DeFi is a smart contract holding tokens for swaps. Learn how its price formula works and what LP tokens represent.">
+<meta property="article:published_time" content="2026-11-18T05:40:53+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/#article",
+      "headline": "What Is a Liquidity Pool, and How Does It Work?",
+      "isAccessibleForFree": true,
+      "description": "A liquidity pool in DeFi is a smart contract holding tokens for swaps. Learn how its price formula works and what LP tokens represent.",
+      "datePublished": "2026-11-18T05:40:53+00:00",
+      "dateModified": "2026-11-18T05:40:53+00:00",
+      "url": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 509,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-is-a-liquidity-pool-and-how-does-it-work-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-is-a-liquidity-pool-and-how-does-it-work-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-is-a-liquidity-pool-and-how-does-it-work-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What Is a Liquidity Pool, and How Does It Work?",
+          "item": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/#webpage",
+      "url": "https://web3newsnetwork.github.io/what-is-a-liquidity-pool-and-how-does-it-work/",
+      "name": "What Is a Liquidity Pool in DeFi? Simple Explanation",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">What Is a Liquidity Pool, and How Does It Work?</h1>
+<p class="s9a5d2e1">A liquidity pool in DeFi is a smart contract holding tokens for swaps. Learn how its price formula works and what LP tokens represent.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-18T05:40:53+00:00">Nov 18, 2026 · 05:40 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/what-is-a-liquidity-pool-and-how-does-it-work.jpg" alt="What Is a Liquidity Pool, and How Does It Work?" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A liquidity pool makes a DeFi swap easier to understand: it shows where the tokens come from and how the trade price is set. It is a smart contract holding two tokens that traders swap directly against.</p>
+<p>Fraxswap is a decentralized exchange and automated market maker (AMM), a system that sets swap prices by formula. Its pair holds two tokens, and its embedded time-weighted market maker adds a way to execute large trades over time. That is one example of how a pool can be part of a broader trading system; <a href="https://sam-robeson.mataroa.blog/blog/what-is-fraxswap-token-swaps-pools-and-long-term-orders/" rel="noopener">Fraxswap</a> adds that time-based trading mechanism.</p>
+<h2>How is a liquidity pool different from an order book?</h2>
+<p>A liquidity pool quotes a price from its reserves, while an order book matches buyers with sellers. On an order-book exchange, a buyer’s order needs a seller willing to trade at that price. In a pool, a trader swaps against the tokens already held by the contract.</p>
+<p>Say a Fraxswap pair holds Token A and Token B. To buy Token A, a trader puts Token B into the pool and takes Token A out. That leaves fewer units of Token A and more units of Token B in the reserves, so the pool’s formula raises Token A’s price for the next swap.</p>
+<p>Uniswap and Curve are other names readers may see when learning about pool-based trading. Their pool designs can use different pricing rules, so the constant-product formula below describes one common model, not every pool.</p>
+<h2>How does a pool set its price, and what do LP tokens mean?</h2>
+<p>In a constant-product pool, the two token reserves are written as <strong>x*y=k</strong>. Here, x and y are the amounts of each token, and k is their product. A trade changes the amounts in the pool while the formula constrains how much can be swapped at the current price. The Uniswap v2 Core whitepaper describes this constant-product model and the tokens used to track a provider’s share.</p>
+<p>The reserve ratio helps determine the quoted price. When a trade removes some of one token and adds the other, the ratio shifts. A larger trade moves the reserves further, so later units of the token being bought cost more under the formula.</p>
+<p>Anyone can deposit both tokens in the pool’s current ratio and receive LP tokens. An LP token is a receipt for a share of the pool: it records the depositor’s proportional claim on the reserves. The ethereum.org DeFi page describes pools as a way to make funds available for DeFi activity.</p>
+<p>That receipt does not promise the exact coins deposited will come back unchanged. Trades can alter the pool’s mix while the LP tokens represent a share of the whole. When a depositor withdraws, they redeem that share of whatever the pool holds then. If the pool’s proportions have shifted, the withdrawal contains different amounts of each token than the original deposit.</p>
+<p>To explain a pool, remember three things: it holds tokens for direct swaps, a formula quotes prices from the reserves, and LP tokens represent a share of those reserves at withdrawal.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/us-gets-authority-to-seize-1-2b-in-binance-crypto/">US gets authority to seize $1.2B in Binance crypto</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/us-moves-to-seize-or-restrain-1-2bn-in-binance-theft/">US moves to seize or restrain $1.2bn in Binance theft</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/doj-gets-court-authority-over-1-2b-in-binance-theft/">DOJ gets court authority over $1.2B in Binance theft</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/">How to follow a Monad bridge transfer from start to finish</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
