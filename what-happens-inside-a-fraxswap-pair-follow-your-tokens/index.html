@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What happens inside a Fraxswap pair: how output is set</title>
+<meta name="description" content="What happens inside a Fraxswap pair contract during a swap? Pending TWAMM orders shift reserves first; the pair then sends output and checks the fee-adjusted invariant.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="What happens inside a Fraxswap pair: follow your tokens">
+<meta property="og:description" content="What happens inside a Fraxswap pair contract during a swap? Pending TWAMM orders shift reserves first; the pair then sends output and checks the fee-adjusted invariant.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/what-happens-inside-a-fraxswap-pair-follow-your-tokens-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="What happens inside a Fraxswap pair: follow your tokens"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What happens inside a Fraxswap pair: follow your tokens">
+<meta name="twitter:description" content="What happens inside a Fraxswap pair contract during a swap? Pending TWAMM orders shift reserves first; the pair then sends output and checks the fee-adjusted invariant.">
+<meta property="article:published_time" content="2026-11-18T18:11:06+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/#article",
+      "headline": "What happens inside a Fraxswap pair: follow your tokens",
+      "isAccessibleForFree": true,
+      "description": "What happens inside a Fraxswap pair contract during a swap? Pending TWAMM orders shift reserves first; the pair then sends output and checks the fee-adjusted invariant.",
+      "datePublished": "2026-11-18T18:11:06+00:00",
+      "dateModified": "2026-11-18T18:11:06+00:00",
+      "url": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 483,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-happens-inside-a-fraxswap-pair-follow-your-tokens-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-happens-inside-a-fraxswap-pair-follow-your-tokens-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/what-happens-inside-a-fraxswap-pair-follow-your-tokens-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "What happens inside a Fraxswap pair: follow your tokens",
+          "item": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/#webpage",
+      "url": "https://web3newsnetwork.github.io/what-happens-inside-a-fraxswap-pair-follow-your-tokens/",
+      "name": "What happens inside a Fraxswap pair: how output is set",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">What happens inside a Fraxswap pair: follow your tokens</h1>
+<p class="s9a5d2e1">What happens inside a Fraxswap pair contract during a swap? Pending TWAMM orders shift reserves first; the pair then sends output and checks the fee-adjusted invariant.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-18T18:11:06+00:00">Nov 18, 2026 · 18:11 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/what-happens-inside-a-fraxswap-pair-follow-your-tokens.jpg" alt="What happens inside a Fraxswap pair: follow your tokens" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Fraxswap pair contracts settle pending long-term orders, send the swap output, then check that the pool still meets its fee-adjusted constant-product rule. That order matters: a quote based on earlier reserves can change when those orders execute.</p>
+<p>Fraxswap is a Uniswap V2-style automated market maker with an embedded time-weighted automated market maker, or TWAMM. <a href="https://fraxswap.co" rel="noopener">fraxswap.co</a> covers Fraxswap, where the pair contract handles both ordinary swaps and the effect of long-term orders.</p>
+<h2>How a pair processes your swap</h2>
+<p>The Fraxswap Router sends the input tokens to the pair and calls its swap function. Before pricing the current trade, the pair executes pending virtual orders up to the current timestamp. These represent slices of long-term orders scheduled to trade over time.</p>
+<p>Those trades can change the pair’s token balances and reserves. Since the pair uses the constant-product rule, the reserve shift can affect how much output your input buys compared with an earlier quote.</p>
+<p>The pair then transfers the requested output optimistically, meaning it sends the tokens before its final check. It reads its balances to work out how much input arrived, adjusts those amounts for the fee, and checks that the resulting reserves satisfy x*y=k. If they fail the check, the transaction reverts, undoing the transfers.</p>
+<p>When the check passes, the pair updates its reserves and price accumulators, which track prices over time. It also emits a Swap event recording the input and output amounts. The result is output tokens in your wallet and updated pool state for the next trade.</p>
+<h2>How does the constant product formula set the price?</h2>
+<p>The formula keeps the product of the two reserves from falling below its required level after the fee. As a trade takes more of one token from the pool, it must add enough of the other to preserve that rule. The larger the trade relative to the reserves, the more the price moves.</p>
+<p>Take a pool with 100 ETH and 300,000 FRAX. Suppose you sell 1 ETH, and use a 0.3% fee just to illustrate the calculation. The fee-adjusted input is 0.997 ETH. Applying the constant-product formula gives about 2,961.47 FRAX out, before any reserve shift from pending TWAMM orders. The output is below the simple reserve ratio of 3,000 FRAX per ETH because the trade changes the pool’s balance.</p>
+<h2>What is a virtual order in Fraxswap?</h2>
+<p>A virtual order is a scheduled part of a long-term trade that the pair accounts for as time passes. Before your swap, the pair settles those parts through the current timestamp. That can move reserves before your trade is priced, so the amount received may differ from a quote made earlier.</p>
+<p>For a beginner comparing DEXs, the useful distinction is that a Fraxswap pair can process both your immediate swap and due long-term order flow in one transaction. When you assess a quote, remember that pending orders may shift the reserves before the pair calculates your output.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/token-allowance-vs-token-balance-erc-20-accounting/">Token allowance vs token balance: ERC-20 accounting</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/what-is-a-liquidity-pool-and-how-does-it-work/">What Is a Liquidity Pool, and How Does It Work?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/us-gets-authority-to-seize-1-2b-in-binance-crypto/">US gets authority to seize $1.2B in Binance crypto</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/us-moves-to-seize-or-restrain-1-2bn-in-binance-theft/">US moves to seize or restrain $1.2bn in Binance theft</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
