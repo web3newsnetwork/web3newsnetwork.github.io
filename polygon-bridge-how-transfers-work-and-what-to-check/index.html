@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polygon bridge explained for beginners: timing and risks</title>
+<meta name="description" content="Polygon bridge explained for beginners: it locks supported tokens on Ethereum and mints matching tokens on Polygon PoS, then reverses the process for withdrawals.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Polygon bridge: how transfers work and what to check">
+<meta property="og:description" content="Polygon bridge explained for beginners: it locks supported tokens on Ethereum and mints matching tokens on Polygon PoS, then reverses the process for withdrawals.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/polygon-bridge-how-transfers-work-and-what-to-check-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Polygon bridge: how transfers work and what to check"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Polygon bridge: how transfers work and what to check">
+<meta name="twitter:description" content="Polygon bridge explained for beginners: it locks supported tokens on Ethereum and mints matching tokens on Polygon PoS, then reverses the process for withdrawals.">
+<meta property="article:published_time" content="2026-11-19T12:56:40+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/#article",
+      "headline": "Polygon bridge: how transfers work and what to check",
+      "isAccessibleForFree": true,
+      "description": "Polygon bridge explained for beginners: it locks supported tokens on Ethereum and mints matching tokens on Polygon PoS, then reverses the process for withdrawals.",
+      "datePublished": "2026-11-19T12:56:40+00:00",
+      "dateModified": "2026-11-19T12:56:40+00:00",
+      "url": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 510,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/polygon-bridge-how-transfers-work-and-what-to-check-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/polygon-bridge-how-transfers-work-and-what-to-check-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/polygon-bridge-how-transfers-work-and-what-to-check-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Polygon bridge: how transfers work and what to check",
+          "item": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/#webpage",
+      "url": "https://web3newsnetwork.github.io/polygon-bridge-how-transfers-work-and-what-to-check/",
+      "name": "Polygon bridge explained for beginners: timing and risks",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Polygon bridge: how transfers work and what to check</h1>
+<p class="s9a5d2e1">Polygon bridge explained for beginners: it locks supported tokens on Ethereum and mints matching tokens on Polygon PoS, then reverses the process for withdrawals.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-19T12:56:40+00:00">Nov 19, 2026 · 12:56 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/polygon-bridge-how-transfers-work-and-what-to-check.jpg" alt="Polygon bridge: how transfers work and what to check" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Polygon bridge moves supported tokens between Ethereum and Polygon PoS by locking tokens on one chain and issuing a matching amount on the other. The chains keep separate records, so one cannot read the other’s balances directly.</p>
+<p>The Polygon PoS Bridge is the service for these transfers, and Polygon Portal is its access point. For background on how the bridge fits into a transfer, see <a href="https://polygonbridge.co" rel="noopener">Polygon bridge</a>. The <a href="https://docs.polygon.technology/pos/how-to/bridging/ethereum-polygon/ethereum-to-matic/" rel="nofollow noopener">Polygon PoS bridge documentation</a> describes the transfer flow and token mapping.</p>
+<h2>Polygon bridge deposits lock tokens before minting a match</h2>
+<p>When you move a mapped token from Ethereum to Polygon PoS, the bridge locks the Ethereum tokens in a contract. Heimdall relays the deposit event, and Bor—the layer that produces Polygon PoS blocks—mints matching tokens on Polygon PoS. That relay is the link between the Ethereum deposit and the new Polygon balance.</p>
+<p>Only mapped tokens can cross this route. A mapping connects a token contract on Ethereum with its corresponding contract on Polygon PoS; a token with the same name may not be the same asset. Deposits usually take minutes, depending on transaction confirmation and network conditions.</p>
+<p>Withdrawals reverse the process: tokens are burned on Polygon PoS, then claimed on Ethereum after a checkpoint—a record of Polygon PoS activity submitted to Ethereum. Because the claim depends on that checkpoint, withdrawals usually take hours rather than minutes.</p>
+<h2>Check the token and gas on both sides</h2>
+<p>Polygon PoS has two different USDC tokens. Circle issues native USDC on Polygon PoS; USDC.e is bridged from Ethereum through the PoS bridge. Their names are similar, but their contracts differ, and an app or exchange may accept only one. Circle explains the distinction in its <a href="https://www.circle.com/blog/native-usdc-now-available-on-polygon-pos" rel="nofollow noopener">announcement of native USDC on Polygon PoS</a>.</p>
+<ul>
+<li><strong>USDC:</strong> Circle’s native Polygon PoS token.</li>
+<li><strong>USDC.e:</strong> Ethereum USDC represented on Polygon PoS through the bridge.</li>
+<li><strong>ETH:</strong> Needed for gas, or transaction fees, on Ethereum.</li>
+<li><strong>POL:</strong> Needed for gas on Polygon PoS, whose chain ID is 137.</li>
+</ul>
+<p>A bridge transfer can involve a fee on each chain because each side requires its own transaction. Before moving funds, match the token contract to what the receiving app accepts and keep gas for the transaction on both networks. This simple check can prevent a transfer that arrives as the wrong token or cannot be used where you planned.</p>
+<h2>Questions beginners ask about the Polygon bridge</h2>
+<h3>Is the Polygon bridge safe to use?</h3>
+<p>The bridge relies on its contracts and Polygon PoS’s validator and checkpoint process. Smart-contract, validator, and user error risks remain, so confirm the token and destination before transferring.</p>
+<h3>Can I bridge from Polygon to chains other than Ethereum?</h3>
+<p>The Polygon PoS Bridge described here connects Polygon PoS and Ethereum. Reaching another chain requires a route that supports that chain.</p>
+<h3>What happens if I send tokens to the bridge contract directly?</h3>
+<p>A direct token transfer may not create the bridge deposit event needed to mint tokens on Polygon PoS. Use the bridge’s intended transfer flow; if you already sent tokens directly, check the transaction and seek help through official Polygon support before trying again.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/short-liquidity-locks-match-the-term-to-your-holding-period/">Short liquidity locks: match the term to your holding period</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/us-gets-court-order-over-1-2bn-in-binance-theft/">US gets court order over $1.2bn in Binance theft</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/how-to-verify-a-solana-mint-authority-is-revoked/">How to Verify a Solana Mint Authority Is Revoked</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/choose-a-fraxswap-pool-when-token-risk-differs/">Choose a Fraxswap Pool When Token Risk Differs</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
