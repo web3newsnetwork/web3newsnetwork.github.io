@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridge relayer after tokens are locked: delivery steps</title>
+<meta name="description" content="What does a bridge relayer do after tokens are locked? It waits for finality and attestation, then submits the message that completes delivery.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Bridge relayer after tokens are locked: how delivery works">
+<meta property="og:description" content="What does a bridge relayer do after tokens are locked? It waits for finality and attestation, then submits the message that completes delivery.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/bridge-relayer-after-tokens-are-locked-how-delivery-works-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bridge relayer after tokens are locked: how delivery works"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bridge relayer after tokens are locked: how delivery works">
+<meta name="twitter:description" content="What does a bridge relayer do after tokens are locked? It waits for finality and attestation, then submits the message that completes delivery.">
+<meta property="article:published_time" content="2026-11-20T17:02:49+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/#article",
+      "headline": "Bridge relayer after tokens are locked: how delivery works",
+      "isAccessibleForFree": true,
+      "description": "What does a bridge relayer do after tokens are locked? It waits for finality and attestation, then submits the message that completes delivery.",
+      "datePublished": "2026-11-20T17:02:49+00:00",
+      "dateModified": "2026-11-20T17:02:49+00:00",
+      "url": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 487,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/bridge-relayer-after-tokens-are-locked-how-delivery-works-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/bridge-relayer-after-tokens-are-locked-how-delivery-works-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/bridge-relayer-after-tokens-are-locked-how-delivery-works-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bridge relayer after tokens are locked: how delivery works",
+          "item": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/#webpage",
+      "url": "https://web3newsnetwork.github.io/bridge-relayer-after-tokens-are-locked-how-delivery-works/",
+      "name": "Bridge relayer after tokens are locked: delivery steps",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Bridge relayer after tokens are locked: how delivery works</h1>
+<p class="s9a5d2e1">What does a bridge relayer do after tokens are locked? It waits for finality and attestation, then submits the message that completes delivery.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-20T17:02:49+00:00">Nov 20, 2026 · 17:02 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/bridge-relayer-after-tokens-are-locked-how-delivery-works.jpg" alt="Bridge relayer after tokens are locked: how delivery works" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>On the Monad bridge, a relayer submits the verified cross-chain message so the destination contract can release or mint the matching asset to its intended recipient. The exact steps depend on the route.</p>
+<ul>
+<li>The source-chain lock creates a message the bridge must verify.</li>
+<li>The relayer waits for the required confirmation or finality and a valid attestation.</li>
+<li>It submits the attested message on the destination chain.</li>
+</ul>
+<p>For a little more context, <a href="https://web3newsnetwork.github.io/how-to-follow-a-monad-bridge-transfer-from-start-to-finish/">how the Monad bridge locks and mints</a> explains the transfer flow. On the Monad bridge route, the relayer’s job comes after the source transaction and its attestation are ready.</p>
+<h2>What happens after tokens are locked in a bridge?</h2>
+<p>After tokens are locked, the bridge waits for the source transaction to reach the route’s required confirmation or finality. That wait gives the bridge time to recognize the lock before anything acts on the destination chain. The required wait can differ by route.</p>
+<p>The message also needs a valid attestation, which is proof that the bridge’s verification process has accepted the source event. For Wormhole, Guardians observe cross-chain messages and sign Verifiable Action Approvals, or VAAs. The VAA carries details including the intended recipient.</p>
+<p>Once the required attestation is ready, the relayer submits the signed message to the destination contract. The contract checks the message and performs the asset action: it releases or mints the corresponding asset for the recipient encoded in the message.</p>
+<h2>A transfer from Ethereum to Monad</h2>
+<p>Say you lock a supported asset on Ethereum and set a recipient on Monad. The Ethereum transaction becomes the source message the bridge must verify. The relayer waits for the route’s required finality and attestation; it does not make the decision that the message is valid.</p>
+<p>For a Wormhole transfer, Guardians sign a VAA for the observed message. A relayer can submit that signed VAA on Monad. The destination contract uses it to complete the transfer to the recipient named in the VAA.</p>
+<p>These are separate jobs: Guardians provide the attestation, the relayer carries and submits it, and the destination contract releases or mints the asset. A relayer can deliver quickly once the requirements are met, but it cannot make a destination contract act without a valid message.</p>
+<h2>Can I claim a bridge transfer without the relayer?</h2>
+<p>For a Wormhole transfer, anyone can submit the VAA on Monad if automatic delivery stalls after the VAA is ready. You can fetch the signed VAA from Wormholescan and submit it on the destination chain.</p>
+<p>Permissionless means you do not need to be the relayer to submit it. The funds still go to the recipient encoded in the VAA, so manual submission does not change who receives the transfer. This option applies to the described Wormhole flow; steps vary by bridge route.</p>
+<p>When delivery stalls, check whether the VAA is ready on Wormholescan. If it is, submitting it on Monad can complete the transfer and show the asset at its intended destination.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/how-to-revoke-token-approvals-in-metamask-after-trading-to-zero/">How to Revoke Token Approvals in MetaMask After Trading to Zero</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/debridge-vs-across-pick-the-cheaper-route-for-this-transfer/">deBridge vs Across: Pick the Cheaper Route for This Transfer</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/polygon-bridge-how-transfers-work-and-what-to-check/">Polygon bridge: how transfers work and what to check</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/short-liquidity-locks-match-the-term-to-your-holding-period/">Short liquidity locks: match the term to your holding period</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
