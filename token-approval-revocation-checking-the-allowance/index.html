@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to check if a token approval was revoked | Chain Times</title>
+<meta name="description" content="To check if a token approval was revoked, wait for confirmation, then read the ERC-20 allowance for your wallet and spender on the same network; zero means none remains.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Token Approval Revocation: Checking the Allowance">
+<meta property="og:description" content="To check if a token approval was revoked, wait for confirmation, then read the ERC-20 allowance for your wallet and spender on the same network; zero means none remains.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/token-approval-revocation-checking-the-allowance-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Token Approval Revocation: Checking the Allowance"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Token Approval Revocation: Checking the Allowance">
+<meta name="twitter:description" content="To check if a token approval was revoked, wait for confirmation, then read the ERC-20 allowance for your wallet and spender on the same network; zero means none remains.">
+<meta property="article:published_time" content="2026-11-20T20:57:02+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/#article",
+      "headline": "Token Approval Revocation: Checking the Allowance",
+      "isAccessibleForFree": true,
+      "description": "To check if a token approval was revoked, wait for confirmation, then read the ERC-20 allowance for your wallet and spender on the same network; zero means none remains.",
+      "datePublished": "2026-11-20T20:57:02+00:00",
+      "dateModified": "2026-11-20T20:57:02+00:00",
+      "url": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 448,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/token-approval-revocation-checking-the-allowance-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/token-approval-revocation-checking-the-allowance-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/token-approval-revocation-checking-the-allowance-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Token Approval Revocation: Checking the Allowance",
+          "item": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/#webpage",
+      "url": "https://web3newsnetwork.github.io/token-approval-revocation-checking-the-allowance/",
+      "name": "How to check if a token approval was revoked | Chain Times",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Token Approval Revocation: Checking the Allowance</h1>
+<p class="s9a5d2e1">To check if a token approval was revoked, wait for confirmation, then read the ERC-20 allowance for your wallet and spender on the same network; zero means none remains.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-20T20:57:02+00:00">Nov 20, 2026 · 20:57 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/token-approval-revocation-checking-the-allowance.jpg" alt="Token Approval Revocation: Checking the Allowance" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>After the revocation transaction confirms, check the ERC-20 token’s allowance for your wallet and the original spender on the same network; a value of zero means that spender has no current approved amount. Start with the transaction or wallet activity, then read the allowance on the token contract or a trusted checker. Make sure the token, wallet, network and spender match the original approval.</p>
+<p>For a trade on SyncSwap, use the spender address shown in that approval record; spender addresses can differ across supported networks. For the matching MetaMask steps, see <a href="https://web3newsnetwork.github.io/how-to-revoke-token-approvals-in-metamask-after-trading-to-zero/">how to revoke SyncSwap approvals in MetaMask</a>.</p>
+<h2>Confirm the revocation on its original network</h2>
+<p>A revocation only counts for this check after its transaction confirms on the network where the token resides. Use the transaction hash or your wallet’s activity to find the revocation and wait for confirmation. A pending transaction has not yet established the updated allowance on-chain.</p>
+<p>Then open the token contract on that network’s block explorer, or use a trusted allowance checker. You need the token contract address, your wallet address and the spender address from the original approval. The token contract records an allowance for each wallet and spender pair, so the right addresses matter.</p>
+<h2>Read the allowance for the original spender</h2>
+<p>Read allowance(owner, spender) using your wallet as the owner and the original spender address. A zero value means that spender currently has no approved ERC-20 amount for your wallet. A nonzero value means some allowance remains, even if the revocation transaction appears in your activity.</p>
+<p>Take the same token, wallet, spender and network in two cases. In one, the confirmed allowance reads zero, so the spender has no current allowance. In the other, it reads a nonzero amount, so an allowance remains. The deciding factor is the current value returned by the token contract.</p>
+<p>A later approval can change that value. A signed permit can also grant token spending without a separate on-chain approval transaction. So a transaction history alone may not show every way an allowance was granted. Alongside transactions, review token activity and any signature prompts; compare their timing with the allowance reading. A later approval or permit may explain why a value is no longer zero.</p>
+<h2>Related questions</h2>
+<h3>How do I check a token allowance on a block explorer?</h3>
+<p>Open the token contract’s read functions and query allowance with your wallet address and the spender address. Confirm the explorer is showing the network where the approval was made.</p>
+<h3>Why does a revoked token approval appear again?</h3>
+<p>A later approval or permit may have granted a new allowance. Check the transaction or signature and its timestamp, then read the current allowance again for the same wallet and spender.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/sent-transaction-why-etherscan-cant-find-it-yet/">Sent transaction: Why Etherscan can’t find it yet</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/bridge-relayer-after-tokens-are-locked-how-delivery-works/">Bridge relayer after tokens are locked: how delivery works</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/how-to-revoke-token-approvals-in-metamask-after-trading-to-zero/">How to Revoke Token Approvals in MetaMask After Trading to Zero</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/debridge-vs-across-pick-the-cheaper-route-for-this-transfer/">deBridge vs Across: Pick the Cheaper Route for This Transfer</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
