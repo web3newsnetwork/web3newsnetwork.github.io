@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Happens When a Bridge Pool Lacks Liquidity? Refunds</title>
+<meta name="description" content="When a bridge pool does not have enough liquidity, cBridge blocks the quote or refunds a transfer it cannot pay from the destination pool in full.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="cBridge Pool Transfers and Destination Liquidity">
+<meta property="og:description" content="When a bridge pool does not have enough liquidity, cBridge blocks the quote or refunds a transfer it cannot pay from the destination pool in full.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/cbridge-pool-transfers-and-destination-liquidity-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="cBridge Pool Transfers and Destination Liquidity"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="cBridge Pool Transfers and Destination Liquidity">
+<meta name="twitter:description" content="When a bridge pool does not have enough liquidity, cBridge blocks the quote or refunds a transfer it cannot pay from the destination pool in full.">
+<meta property="article:published_time" content="2026-11-21T13:08:30+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/#article",
+      "headline": "cBridge Pool Transfers and Destination Liquidity",
+      "isAccessibleForFree": true,
+      "description": "When a bridge pool does not have enough liquidity, cBridge blocks the quote or refunds a transfer it cannot pay from the destination pool in full.",
+      "datePublished": "2026-11-21T13:08:30+00:00",
+      "dateModified": "2026-11-21T13:08:30+00:00",
+      "url": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 407,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/cbridge-pool-transfers-and-destination-liquidity-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/cbridge-pool-transfers-and-destination-liquidity-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/cbridge-pool-transfers-and-destination-liquidity-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "cBridge Pool Transfers and Destination Liquidity",
+          "item": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/#webpage",
+      "url": "https://web3newsnetwork.github.io/cbridge-pool-transfers-and-destination-liquidity/",
+      "name": "What Happens When a Bridge Pool Lacks Liquidity? Refunds",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">cBridge Pool Transfers and Destination Liquidity</h1>
+<p class="s9a5d2e1">When a bridge pool does not have enough liquidity, cBridge blocks the quote or refunds a transfer it cannot pay from the destination pool in full.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-21T13:08:30+00:00">Nov 21, 2026 · 13:08 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/cbridge-pool-transfers-and-destination-liquidity.jpg" alt="cBridge Pool Transfers and Destination Liquidity" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A cBridge pool transfer is usually blocked before you send when the destination pool cannot cover it; if liquidity drops after you deposit, the transfer is refunded on the source chain. The payout comes from tokens already held in the destination pool, so the transfer is paid in full or refunded.</p>
+<h2>What happens when destination liquidity is short?</h2>
+<p>With xLiquidity, tokens are paid out from a liquidity pool on the destination network. The pool must hold enough of the requested asset when the payout is due. The cBridge documentation says a transfer that cannot be relayed is marked for a source-chain refund.</p>
+<p>The usual sign of a shortfall is an error in the quote, which blocks the send. For a wider view of the route and its pool payouts, read <a href="https://cryptoworldtoday.github.io/how-to-get-a-cbridge-refund-and-restore-your-balance/" rel="noopener">cbridge cross-chain</a>; that context helps explain how cBridge moves assets between networks.</p>
+<p>A pool transfer does not pay out part of the amount and leave the rest waiting. It also does not sit in a queue until liquidity returns. The outcome is all or nothing: a full payout from available destination liquidity, or a refund on the source chain if the transfer cannot be relayed.</p>
+<p>This is why the quote is useful but not a guarantee that the pool will still have the same balance later. Other transfers can draw tokens from the pool. Liquidity providers can also withdraw tokens. Either can reduce the balance between your quote and the payout.</p>
+<h2>What does a shortfall look like in practice?</h2>
+<p>Say you want to send 10,000 USDC from Ethereum to an Arbitrum pool holding 6,000 USDC. At quote time, the pool cannot cover the requested amount, so the quote returns an error and the send is blocked. You do not get a partial 6,000 USDC payout.</p>
+<p>Now suppose the pool had enough liquidity when you quoted, but other transfers or LP withdrawals reduced it before your payout. If the transfer can no longer be relayed, it becomes a refund on the source chain. The refund is claimed there; it is not a delayed payout from Arbitrum.</p>
+<p>In everyday use, this matters when choosing an amount for a pool-based route between networks such as Ethereum and Arbitrum. A smaller amount may fit the available pool. If it does not, consider a mint-based route where one is available. For a pool transfer, expect either the full payout or a source-chain refund, then choose a smaller amount or another route.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/dbs-and-circle-open-24-7-usdc-access-for-asian-institutions/">DBS and Circle open 24/7 USDC access for Asian institutions</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/is-bridging-crypto-between-networks-a-taxable-event-swap-cases/">Is bridging crypto between networks a taxable event? Swap cases</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/eth-for-dex-token-swaps-how-gas-works/">ETH for DEX Token Swaps: How Gas Works</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/token-approval-revocation-checking-the-allowance/">Token Approval Revocation: Checking the Allowance</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
