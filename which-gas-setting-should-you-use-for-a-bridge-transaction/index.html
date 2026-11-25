@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low vs Market vs Aggressive Gas for Bridging: What to Choose</title>
+<meta name="description" content="Low vs market vs aggressive gas settings for bridging: choose Market by default, Low when the network is quiet and time allows, or Aggressive near a deadline.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Which gas setting should you use for a bridge transaction?">
+<meta property="og:description" content="Low vs market vs aggressive gas settings for bridging: choose Market by default, Low when the network is quiet and time allows, or Aggressive near a deadline.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/which-gas-setting-should-you-use-for-a-bridge-transaction-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Which gas setting should you use for a bridge transaction?"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Which gas setting should you use for a bridge transaction?">
+<meta name="twitter:description" content="Low vs market vs aggressive gas settings for bridging: choose Market by default, Low when the network is quiet and time allows, or Aggressive near a deadline.">
+<meta property="article:published_time" content="2026-11-25T18:27:59+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/#article",
+      "headline": "Which gas setting should you use for a bridge transaction?",
+      "isAccessibleForFree": true,
+      "description": "Low vs market vs aggressive gas settings for bridging: choose Market by default, Low when the network is quiet and time allows, or Aggressive near a deadline.",
+      "datePublished": "2026-11-25T18:27:59+00:00",
+      "dateModified": "2026-11-25T18:27:59+00:00",
+      "url": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 551,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/which-gas-setting-should-you-use-for-a-bridge-transaction-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/which-gas-setting-should-you-use-for-a-bridge-transaction-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/which-gas-setting-should-you-use-for-a-bridge-transaction-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Which gas setting should you use for a bridge transaction?",
+          "item": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/#webpage",
+      "url": "https://web3newsnetwork.github.io/which-gas-setting-should-you-use-for-a-bridge-transaction/",
+      "name": "Low vs Market vs Aggressive Gas for Bridging: What to Choose",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">Which gas setting should you use for a bridge transaction?</h1>
+<p class="s9a5d2e1">Low vs market vs aggressive gas settings for bridging: choose Market by default, Low when the network is quiet and time allows, or Aggressive near a deadline.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-25T18:27:59+00:00">Nov 25, 2026 · 18:27 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/which-gas-setting-should-you-use-for-a-bridge-transaction.jpg" alt="Which gas setting should you use for a bridge transaction?" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>Choose Market for most bridge transactions. Use Low when there is no deadline and the network is quiet; choose Aggressive when a quote is close to expiring or the network is congested.</p>
+<p>These presets affect the fee for the transaction on the source chain. They do not shorten the bridge’s later finality wait or relay time. The <a href="https://dev.to/mack_schneider/does-the-monad-bridge-use-wrapped-tokens-know-what-you-hold-15i8" rel="noopener">Monad bridge</a> page explains what to expect when transferring supported assets between Ethereum and Monad.</p>
+<h2>What changes between Low, Market and Aggressive gas settings?</h2>
+<p>Low, Market and Aggressive change the priority fee and max fee that your wallet sets for the source transaction. The priority fee is a tip to validators; the max fee is the most the transaction can pay per unit of gas. Wallets such as MetaMask show an estimated cost range for each preset.</p>
+<p>Under EIP-1559, the base fee is combined with the priority fee to determine the fee per unit of gas. The base fee changes with network demand and is burned. The transaction’s fee is gas used multiplied by the base fee plus the priority fee, up to the max fee. Any gap between the max fee and the actual charge is not spent, as Ethereum.org explains.</p>
+<ul>
+<li><strong>Low:</strong> Usually offers the lowest tip and cost estimate. It can take longer to be included, especially if the base fee rises while the transaction is pending.</li>
+<li><strong>Market:</strong> Uses a fee estimate suited to current conditions. It is the practical default when you want a normal chance of timely inclusion without choosing the largest tip.</li>
+<li><strong>Aggressive:</strong> Offers a larger tip to seek faster inclusion. It can cost more, but it speeds up only the source transaction.</li>
+</ul>
+<h2>Which preset fits your deadline and quote?</h2>
+<p>Choose Low when you can wait, the network is quiet and your route has no near-term quote deadline. Choose Market by default when you want to avoid an unnecessary tip while keeping the transaction moving under current conditions. Choose Aggressive when the network is congested or an expiring quote leaves little time.</p>
+<p>That deadline matters on an intent-based route, where a quote can expire. Say you choose Low, and the transaction is mined after the quote expires: the deposit can revert. A faster source transaction may help you meet the quote window, though it does not guarantee delivery by a particular time.</p>
+<p>Once the source transaction is mined, the bridge still has to wait for finality and relay the transfer. Those steps take the same time regardless of whether you chose Low, Market or Aggressive. A larger tip can change when the source transaction is included; it cannot speed up Monad bridge delivery after that point. Treating inclusion speed and bridge delivery as the same thing can lead you to pay extra for time the preset cannot save.</p>
+<h2>Related</h2>
+<h3>Why is my bridge transaction pending for so long?</h3>
+<p>A Low priority fee may be too small for current demand, leaving the source transaction pending until fees ease or the transaction is replaced.</p>
+<h3>What is max priority fee in a wallet?</h3>
+<p>It is the cap on the tip paid to validators. The actual tip can be lower, depending on the base fee and max fee.</p>
+<p>For most transfers, Market is the sound starting point. Let urgency, network demand and any quote expiry determine when Low or Aggressive makes more sense.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/what-is-slippage-tolerance-set-a-swap-limit-that-fits/">What Is Slippage Tolerance? Set a Swap Limit That Fits</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/spreadsheet-vs-crypto-tax-software-software-suits-complex-dex-trades/">Spreadsheet vs crypto tax software: software suits complex DEX trades</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/eu-proposes-crypto-crackdown-in-22nd-russia-sanctions-package/">EU proposes crypto crackdown in 22nd Russia sanctions package</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/eu-proposal-targets-russian-banks-and-crypto-networks/">EU proposal targets Russian banks and crypto networks</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
