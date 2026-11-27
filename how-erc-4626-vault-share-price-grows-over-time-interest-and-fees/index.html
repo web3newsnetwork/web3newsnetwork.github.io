@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How ERC-4626 vault share price grows over time: net fees</title>
+<meta name="description" content="An ERC-4626 vault share price grows over time when interest raises totalAssets faster than fee shares expand totalSupply, lifting each share’s value.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How ERC-4626 vault share price grows over time: Interest and fees">
+<meta property="og:description" content="An ERC-4626 vault share price grows over time when interest raises totalAssets faster than fee shares expand totalSupply, lifting each share’s value.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How ERC-4626 vault share price grows over time: Interest and fees"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How ERC-4626 vault share price grows over time: Interest and fees">
+<meta name="twitter:description" content="An ERC-4626 vault share price grows over time when interest raises totalAssets faster than fee shares expand totalSupply, lifting each share’s value.">
+<meta property="article:published_time" content="2026-11-27T23:41:21+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/#article",
+      "headline": "How ERC-4626 vault share price grows over time: Interest and fees",
+      "isAccessibleForFree": true,
+      "description": "An ERC-4626 vault share price grows over time when interest raises totalAssets faster than fee shares expand totalSupply, lifting each share’s value.",
+      "datePublished": "2026-11-27T23:41:21+00:00",
+      "dateModified": "2026-11-27T23:41:21+00:00",
+      "url": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 515,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How ERC-4626 vault share price grows over time: Interest and fees",
+          "item": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/#webpage",
+      "url": "https://web3newsnetwork.github.io/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees/",
+      "name": "How ERC-4626 vault share price grows over time: net fees",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">How ERC-4626 vault share price grows over time: Interest and fees</h1>
+<p class="s9a5d2e1">An ERC-4626 vault share price grows over time when interest raises totalAssets faster than fee shares expand totalSupply, lifting each share’s value.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-27T23:41:21+00:00">Nov 27, 2026 · 23:41 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/how-erc-4626-vault-share-price-grows-over-time-interest-and-fees.jpg" alt="How ERC-4626 vault share price grows over time: Interest and fees" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>An ERC-4626 vault share price rises when its assets grow faster than its share supply. The price is totalAssets divided by totalSupply, so yield accrues to the pool rather than appearing as extra shares in each depositor’s balance.</p>
+<p>Morpho vaults are curated, single-asset pools that allocate deposits across lending markets and other supported yield sources. <a href="https://morphovaults.app" rel="noopener">Morpho vaults</a> add a concrete setting for seeing how pool-level accounting turns yield into a higher value per share.</p>
+<h2>What changes inside a vault as yield accrues?</h2>
+<p>Deposits and earned interest add to totalAssets, while the share supply changes only when shares are minted or burned. The resulting price is stated in underlying units per share.</p>
+<ul>
+<li><strong>Deposit:</strong> A user puts in the vault’s underlying asset and receives shares in return.</li>
+<li><strong>Borrower interest:</strong> Interest earned by the pool raises totalAssets. With no share mint or burn, totalSupply stays the same, so each share represents more assets.</li>
+<li><strong>Fee shares:</strong> Morpho vault fees are taken by minting shares to the fee recipient. This expands totalSupply and dilutes existing holders, so the quoted share price reflects value after that dilution.</li>
+<li><strong>Market loss:</strong> A loss can reduce totalAssets and lower the price per share.</li>
+</ul>
+<p>Interest is computed when the vault is read; it is not stored as a separate growing share-price figure. ERC-4626’s convertToAssets function maps a share amount to its underlying asset value using the vault’s accounting.</p>
+<h2>What does that look like for a 1,000 USDC deposit?</h2>
+<p>Take an illustrative case with no fees or losses. At a price of 1.00 USDC per share, a 1,000 USDC deposit buys 1,000 shares. The deposit raises both totalAssets and totalSupply, while the price stays at 1.00.</p>
+<p>Later, suppose borrower interest adds 50 USDC to the pool. TotalAssets has risen by 50 USDC; totalSupply and the depositor’s 1,000 shares have stayed fixed. The price is now 1.05 USDC per share, so those shares redeem for 1,050 USDC. The gain appears in the value of each share, not in a larger share count.</p>
+<p>In a vault that mints fee shares, totalSupply also rises as fees are charged. The share price therefore grows net of those fees: a holder’s quoted price already includes the dilution from fee shares.</p>
+<h2>How can you use share price to read your position and yield?</h2>
+<p>Multiply your share balance by the current price to estimate its underlying value. To estimate annualized APY, compare prices at two dates and raise the ratio to the power of 365 divided by the number of days between readings, then subtract one. This assumes no deposits or withdrawals during that period; the result reflects yield after fees recorded in the price.</p>
+<h2>Related</h2>
+<h3>ERC-4626 vs rebasing tokens</h3>
+<p>ERC-4626 vaults generally keep a user’s share count fixed as the underlying value per share changes. Rebasing tokens instead change the token balance to reflect a holder’s share of the pool.</p>
+<h3>How to calculate APY from share price</h3>
+<p>Divide the later price by the earlier price, annualize that growth over the elapsed days, and subtract one. The calculation uses the net price change, including the effect of fee shares minted during the period.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/bases-challenge-period-explains-why-withdrawals-wait/">Base’s Challenge Period Explains Why Withdrawals Wait</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/eu-proposal-targets-crypto-networks-in-russia-sanctions-package/">EU proposal targets crypto networks in Russia sanctions package</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/btc-swap-api-integration-bridge-and-vault-routes-compared/">BTC swap API integration: bridge and vault routes compared</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/yap-kredi-uses-ripple-custody-tech-for-crypto-platform/">Yapı Kredi uses Ripple custody tech for crypto platform</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
