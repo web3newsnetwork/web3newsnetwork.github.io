@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TeleSwap vs THORChain API: BTC swap integration</title>
+<meta name="description" content="TeleSwap vs THORChain API: THORChain routes BTC to native assets; TeleSwap mints teleBTC on EVM and can swap it, giving app developers two distinct integration paths.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="BTC swap API integration: bridge and vault routes compared">
+<meta property="og:description" content="TeleSwap vs THORChain API: THORChain routes BTC to native assets; TeleSwap mints teleBTC on EVM and can swap it, giving app developers two distinct integration paths.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/btc-swap-api-integration-bridge-and-vault-routes-compared-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BTC swap API integration: bridge and vault routes compared"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BTC swap API integration: bridge and vault routes compared">
+<meta name="twitter:description" content="TeleSwap vs THORChain API: THORChain routes BTC to native assets; TeleSwap mints teleBTC on EVM and can swap it, giving app developers two distinct integration paths.">
+<meta property="article:published_time" content="2026-11-27T08:02:00+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/#article",
+      "headline": "BTC swap API integration: bridge and vault routes compared",
+      "isAccessibleForFree": true,
+      "description": "TeleSwap vs THORChain API: THORChain routes BTC to native assets; TeleSwap mints teleBTC on EVM and can swap it, giving app developers two distinct integration paths.",
+      "datePublished": "2026-11-27T08:02:00+00:00",
+      "dateModified": "2026-11-27T08:02:00+00:00",
+      "url": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 507,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/btc-swap-api-integration-bridge-and-vault-routes-compared-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/btc-swap-api-integration-bridge-and-vault-routes-compared-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/btc-swap-api-integration-bridge-and-vault-routes-compared-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BTC swap API integration: bridge and vault routes compared",
+          "item": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/#webpage",
+      "url": "https://web3newsnetwork.github.io/btc-swap-api-integration-bridge-and-vault-routes-compared/",
+      "name": "TeleSwap vs THORChain API: BTC swap integration",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">BTC swap API integration: bridge and vault routes compared</h1>
+<p class="s9a5d2e1">TeleSwap vs THORChain API: THORChain routes BTC to native assets; TeleSwap mints teleBTC on EVM and can swap it, giving app developers two distinct integration paths.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-27T08:02:00+00:00">Nov 27, 2026 · 08:02 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/btc-swap-api-integration-bridge-and-vault-routes-compared.jpg" alt="BTC swap API integration: bridge and vault routes compared" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>TeleSwap and THORChain take different routes for app BTC swaps: THORChain sends native BTC through validator-run vaults to native assets, while TeleSwap verifies a Bitcoin deposit and mints teleBTC on an EVM chain, with an optional swap.</p>
+<ul>
+<li>Choose THORChain for native assets on non-EVM chains; its vault flow pays out across many chains.</li>
+<li>Choose the Bitcoin bridge for BTC-backed tokens on EVM chains; it delivers teleBTC or a swapped token.</li>
+<li>Keep THORChain inbound details fresh; vault churn can retire an address after its quote expires.</li>
+<li>Block exchange-account deposits for THORChain; failed swaps refund to the source BTC address.</li>
+</ul>
+<h2>TeleSwap suits EVM tokens; THORChain suits native assets</h2>
+<p>Start with the asset your app must deliver, because that decides the deposit flow and the failure destination. For the EVM route, use <a href="https://teleswap.net" rel="noopener">TeleSwap</a> when your app needs a Bitcoin-backed token or a DEX-swapped token on a supported EVM chain.</p>
+<p>THORChain starts with a fresh quote. The quote returns an inbound vault address, a memo and an expiry. Send the BTC to that address with the memo attached. THORChain validators run the vaults, and vaults can churn, so caching an inbound address past the quote expiry risks sending BTC to a retired vault.</p>
+<p>The EVM deposit has different inputs: send BTC to a Locker address with the request data encoded in an OP_RETURN output. A Bitcoin relay contract verifies the on-chain deposit. The destination result is teleBTC, or a token received after an optional swap.</p>
+<ul>
+<li><strong>THORChain:</strong> the inbound address and memo route the quoted swap; native assets arrive on the selected supported chain.</li>
+<li><strong>The Locker flow:</strong> the Locker address and OP_RETURN request identify the deposit; teleBTC or a DEX-swapped token arrives on a supported EVM chain.</li>
+</ul>
+<p>Failure handling changes what your app must tell users. THORChain refunds a failed BTC swap to the sending BTC address. If a user deposits from an exchange account, the refund would go to the exchange’s wallet, not necessarily back to an address the user controls. Block exchange-account deposits for this flow, or require a source address that can receive the refund.</p>
+<p>For the Locker route, a failed swap falls back to teleBTC on the destination chain. That gives the app a token outcome to handle instead of a BTC refund to the source address.</p>
+<h3>What does a THORChain swap memo contain?</h3>
+<p>A THORChain swap memo carries the swap request for the inbound BTC, including the destination asset and destination address. Pair it with the vault address and expiry from the fresh quote.</p>
+<h3>What is teleBTC?</h3>
+<p>teleBTC is a Bitcoin-backed token minted on an EVM chain after the Bitcoin deposit is verified through the relay contract. The app can deliver it directly or swap it for another supported EVM token.</p>
+<p>Consider two otherwise identical apps with the same BTC deposit and swap need. When the target is a BTC-backed token on EVM, the Locker route fits; change only the target to a native asset on a non-EVM chain, and THORChain fits. Choose based on that destination constraint, and keep its corresponding failure path visible to users.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/yap-kredi-uses-ripple-custody-tech-for-crypto-platform/">Yapı Kredi uses Ripple custody tech for crypto platform</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/eu-proposal-targets-russian-banks-and-crypto-networks-2/">EU proposal targets Russian banks and crypto networks</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/low-liquidity-swaps-start-tight-reduce-size-before-widening/">Low-liquidity swaps: start tight, reduce size before widening</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/staking-gno-on-gnosis-chain-validator-or-pool/">Staking GNO on Gnosis Chain: validator or pool</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
