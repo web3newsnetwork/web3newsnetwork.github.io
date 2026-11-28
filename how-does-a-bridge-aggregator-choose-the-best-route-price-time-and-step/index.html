@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How does a bridge aggregator decide? Price, time, steps</title>
+<meta name="description" content="How does a bridge aggregator decide which route is best? It compares what you receive, fees, gas, time and steps, then recommends a route.">
+<link rel="canonical" href="https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#171416">
+<meta name="author" content="The Chain Times Desk"><meta property="og:type" content="article">
+<meta property="og:site_name" content="Chain Times">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How does a bridge aggregator choose the best route? Price, time and steps">
+<meta property="og:description" content="How does a bridge aggregator decide which route is best? It compares what you receive, fees, gas, time and steps, then recommends a route.">
+<meta property="og:url" content="https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/">
+<meta property="og:image" content="https://web3newsnetwork.github.io/assets/covers/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="How does a bridge aggregator choose the best route? Price, time and steps"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How does a bridge aggregator choose the best route? Price, time and steps">
+<meta name="twitter:description" content="How does a bridge aggregator decide which route is best? It compares what you receive, fees, gas, time and steps, then recommends a route.">
+<meta property="article:published_time" content="2026-11-28T07:04:11+00:00">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/sa4aeef2f50.css">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Chain Times" href="/feed.xml"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/#article",
+      "headline": "How does a bridge aggregator choose the best route? Price, time and steps",
+      "isAccessibleForFree": true,
+      "description": "How does a bridge aggregator decide which route is best? It compares what you receive, fees, gas, time and steps, then recommends a route.",
+      "datePublished": "2026-11-28T07:04:11+00:00",
+      "dateModified": "2026-11-28T07:04:11+00:00",
+      "url": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/",
+      "mainEntityOfPage": {
+        "@id": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/#webpage"
+      },
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "wordCount": 487,
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step-16x9.jpg",
+          "width": 1200,
+          "height": 675
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step-4x3.jpg",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "@type": "ImageObject",
+          "url": "https://web3newsnetwork.github.io/assets/covers/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step-1x1.jpg",
+          "width": 1200,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://web3newsnetwork.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How does a bridge aggregator choose the best route? Price, time and steps",
+          "item": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://web3newsnetwork.github.io/#org",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/apple-touch-icon.png"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://web3newsnetwork.github.io/assets/og.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "publishingPrinciples": "https://web3newsnetwork.github.io/editorial-standards/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web3newsnetwork.github.io/#website",
+      "name": "Chain Times",
+      "url": "https://web3newsnetwork.github.io/",
+      "publisher": {
+        "@id": "https://web3newsnetwork.github.io/#org"
+      },
+      "inLanguage": "en",
+      "description": "Chain Times reports crypto news: bitcoin and ether markets, exchanges, DeFi protocols, stablecoins, regulation, security incidents and network upgrades."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/#webpage",
+      "url": "https://web3newsnetwork.github.io/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step/",
+      "name": "How does a bridge aggregator decide? Price, time, steps",
+      "isPartOf": {
+        "@id": "https://web3newsnetwork.github.io/#website"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="post">
+<a class="s91f501b" href="#main">Jump to content</a>
+<header class="see39a6b">
+  <div class="s2b8c4a7">
+    <a class="s375eb52" href="/">Chain Times</a>
+    <p class="sa6c60b8">Markets, protocols, policy and people</p>
+  </div>
+</header>
+
+<main id="main">
+<article class="sef19a22 s63350db">
+  <header class="s901e734">
+    <h1 class="s4461244">How does a bridge aggregator choose the best route? Price, time and steps</h1>
+<p class="s9a5d2e1">How does a bridge aggregator decide which route is best? It compares what you receive, fees, gas, time and steps, then recommends a route.</p>    <p class="s773b284 s4eb3337"><span class="se875914">The Chain Times Desk</span><time datetime="2026-11-28T07:04:11+00:00">Nov 28, 2026 · 07:04 UTC</time><span>3 min read</span></p>
+  </header>
+  <figure class="s5437be8"><img fetchpriority="high" class="saa322e4" src="/assets/covers/how-does-a-bridge-aggregator-choose-the-best-route-price-time-and-step.jpg" alt="How does a bridge aggregator choose the best route? Price, time and steps" width="1200" height="630"></figure>
+  <div class="s63a7d57"><p>A bridge aggregator helps you move assets between networks by comparing routes and recommending one based on what you receive, cost, time and steps. The route with the highest output can take longer or require extra signatures, so the recommendation weighs more than price alone.</p>
+<h2>How does a bridge aggregator decide which route to recommend?</h2>
+<p>A bridge aggregator takes your tokens, source and destination chains, and amount, then queries eligible bridges and decentralised exchanges (DEXs) for routes. It estimates the amount you will receive after bridge fees and gas on both chains, along with each route’s time and number of steps. It returns ranked options and marks one as recommended.</p>
+<p>Jumper bridge uses LI.FI to find routes through supported bridges and swaps. LI.FI’s API documentation offers recommended, cheapest and fastest route ordering; quotes draw on current liquidity from providers such as Across, Stargate and Hop Protocol. Jumper bridge can also connect routes using services such as Squid and Bungee. For more on <a href="https://cryptoblog.mataroa.blog/blog/jumper-bridge-settings-which-defaults-should-you-change/" rel="noopener">Jumper bridge routes</a>, see what options it can find for a transfer.</p>
+<p>“Recommended” is a choice among available routes, not simply a label for the largest output. Each extra step can mean another wallet signature and another point where a transaction can fail or stall. A route that nets slightly more may involve a swap before the bridge, then a separate action on the destination chain. A simpler route can be a better fit if it saves a signature and reduces the chance of a problem.</p>
+<h2>What should I check before I bridge?</h2>
+<p>Before you send funds, compare the amount received, estimated time and steps for the specific route. Say you are moving ETH from Ethereum to Arbitrum. A one-step Across route may deliver a little less than a swap-plus-bridge route, but it avoids an extra action. If your priority is simplicity, the one-step route may suit you better; if the extra output matters more, compare its additional steps and time.</p>
+<p>The quotes are based on conditions when you request them. Liquidity and costs can change, so a route that ranks first now may move down minutes later. When helping a friend, point them to the “you receive” amount and estimated time, then have them review the steps before signing. The recommended label is a starting point; those details show what the choice means for their transfer.</p>
+<h2>Related questions</h2>
+<h3>Do bridge aggregators get paid to rank routes?</h3>
+<p>A recommended label alone does not show whether a platform receives payment for a route. The route-ordering information in LI.FI’s API documentation describes recommended, cheapest and fastest options, but it does not by itself explain every platform’s commercial arrangements.</p>
+<h3>Why do Jumper and Squid recommend different routes?</h3>
+<p>Jumper and Squid can show different recommendations because their available routes, quotes and ranking choices may differ at the time you check. Compare the amount received, time and steps on each quote, then choose the option that fits the transfer.</p></div>
+  <section class="sbb3954b">
+    <h2 class="s19e55ca">More stories</h2>
+    <ol class="sd79273a">
+      <li class="sfe70eee"><span class="s5bcb35e">01</span><a href="/how-to-run-the-jumper-bridge-checklist-and-confirm-a-test/">How to run the Jumper bridge checklist and confirm a test</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">02</span><a href="/what-is-a-multi-hop-route-and-how-does-it-work/">What Is a Multi-Hop Route, and How Does It Work?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">03</span><a href="/when-is-a-solana-priority-fee-needed-for-busy-accounts/">When Is a Solana Priority Fee Needed for Busy Accounts?</a></li>
+      <li class="sfe70eee"><span class="s5bcb35e">04</span><a href="/defi-transaction-reversals-and-on-chain-finality/">DeFi transaction reversals and on-chain finality</a></li>
+    </ol>
+  </section>
+</article>
+</main>
+
+<footer class="s76f0212">
+  <div class="s76321d3">
+    <p class="s90a3bbc">Chain Times</p>
+    <nav class="s3d71935" aria-label="Site">
+      <ul>
+<li><a href="/">Home</a></li><li><a href="/archive/">Archive</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/editorial-standards/">Editorial standards</a></li>      </ul>
+    </nav>
+    <p class="s837b768">Published for information only; not financial advice.</p>
+    <p class="s7778c80">© 2026 Chain Times</p>
+  </div>
+</footer>
+</body>
+</html>
